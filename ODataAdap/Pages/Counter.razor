@@ -1,0 +1,25 @@
+﻿@page "/counter"
+
+@using ODataAdap.Models
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor
+
+<SfGantt TValue="TaskDatum" Height="450px" Width="100%" HighlightWeekends="true" AllowFiltering AllowSorting
+         Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll","Indent","Outdent"})"
+         AllowSelection="true" GridLines="GridLine.Both" TreeColumnIndex="1">
+    <SfDataManager Url="https://localhost:7160/odata/Gantt" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+                     Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true" ShowDeleteConfirmDialog="true"></GanttEditSettings>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+    </GanttColumns>
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskDatum">
+    </GanttLabelSettings>
+    <GanttSplitterSettings Position="40%"> </GanttSplitterSettings>
+</SfGantt>
