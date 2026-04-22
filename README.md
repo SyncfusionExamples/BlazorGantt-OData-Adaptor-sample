@@ -1,12 +1,12 @@
 # BlazorGantt OData Adaptor Sample
 
-This repository contains a sample application that demonstrates how to retrieve data from a RESTful service and bind it to the Syncfusion Blazor Gantt Chart using the [ODataV4Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.ODataV4Adaptor.html) of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. The sample also illustrates how CRUD operations are performed through an [OData V4 service](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197).
+This repository contains a sample Blazor application that demonstrates how to retrieve data from a RESTful service and bind it to the Syncfusion Blazor Gantt Chart using the [ODataV4Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.ODataV4Adaptor.html) of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. The sample also illustrates how **CRUD operations** are performed through an [OData V4 service](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197).
 
-## Project Overview
+## Project overview
 
-The Syncfusion Blazor Gantt Chart supports remote data binding through RESTful services that follow the OData V4 specification. This project showcases how task data can be fetched from an OData service and rendered in the Gantt timeline using the ODataV4Adaptor. The SfDataManager acts as the communication layer between the Gantt component and the service endpoint.
+The Syncfusion Blazor Gantt Chart supports remote data binding through RESTful services that follow the **OData V4 specification**. This project showcases how task data can be fetched from an OData service and rendered in the Gantt timeline using the ODataV4Adaptor. The SfDataManager acts as the communication layer between the Gantt component and the service endpoint.
 
-The sample highlights how create, read, update, and delete operations initiated from the Gantt Chart are translated into OData requests and processed by the service. This approach enables standardized data access over HTTP and is suitable for applications that rely on OData‑based back-end services.
+The sample highlights how create, read, update, and delete operations initiated from the Gantt Chart are automatically translated into OData requests and processed by the service. This approach enables standardized data access over HTTP and is suitable for applications that rely on OData‑based back-end services.
 
 ## Features
 
@@ -16,18 +16,37 @@ The sample highlights how create, read, update, and delete operations initiated 
 - Structured data communication using `ODataV4Adaptor`
 - Implementation using Syncfusion Blazor Gantt components
 
-## Configuration Notes
+## Configuration notes
 
-Before running the sample, ensure that the path of the `OData.mdf` file is correctly updated in the `appsettings.json` file of the OData adaptor project. The database file path must reference a valid local location.
+Before running the sample, ensure that the path of the `OData.mdf` file is correctly updated in the `appsettings.json` file of the OData adaptor project. The database file path must reference a valid local location on your system, and the OData service should be running and accessible by the Blazor application.
 
 ## Prerequisites
 
-- Visual Studio 2026
-- .NET SDK compatible with Blazor
-- Syncfusion Blazor Gantt NuGet package
+- Visual Studio 2022 (or later)
+- .NET SDK 8.0 or later
 - OData V4–compatible REST service
+- Syncfusion Blazor Gantt NuGet package
+- A valid Syncfusion license (Community or Trial)
+
+## How to run the project
+
+- Clone or download this repository to your local system.
+- Open the project file (.csproj) in Visual Studio 2022 or later.
+- Restore the required NuGet packages.
+- Ensure the OData service is running and properly configured.
+- Build and run the Blazor application.
+- Verify that Gantt data is loaded from the OData service and that CRUD operations work as expected.
 
 ## Reference
 
 For additional details, refer to the documentation:  
 https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#odatav4-adaptor
+
+## Syncfusion License
+
+This sample uses the Syncfusion Blazor components, which require a valid Syncfusion license.
+
+- Community License: https://www.syncfusion.com/products/communitylicense
+- Trial License: https://www.syncfusion.com/account/manage-trials/start-trials
+
+Ensure the license key is registered before running the application.
